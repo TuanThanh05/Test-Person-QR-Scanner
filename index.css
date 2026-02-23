@@ -276,3 +276,27 @@ body {
     transform: translateY(1px) scale(0.98);
     box-shadow: 0 2px 5px rgba(85, 140, 180, 0.4);
 }
+/* MAIN bọc toàn bộ nội dung trang */
+.page-main{
+    margin-top: 18px;   /* thay vì mt-4 và mt-5 lộn xộn */
+    padding-top: 8px;
+}
+
+/* 2 khu vực */
+.scan-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* chỉnh khoảng cách “chỉ một chút” giữa scan và nhập */
+.manual-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 22px;   /* <-- CHỈNH Ở ĐÂY: nhỏ hơn nữa thì 12-18px */
+    padding-top: 6px;
+}

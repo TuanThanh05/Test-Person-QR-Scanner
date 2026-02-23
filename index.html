@@ -10,64 +10,68 @@
 </head>
 <body>
 
-    <header class="top-bar">
-        <div class="logo-area">
-            <i class="fa-solid fa-qrcode text-white"></i>
-            <span class="logo-text text-white ms-2">QR CODE</span>
-        </div>
-        <div class="menu-area">
-            <i class="fa-solid fa-bars text-white menu-icon" id="menuToggle"></i>
-            <div class="dropdown-menu-custom" id="dropdownMenu">
-                <a href="about.html">About</a>
-            </div>
-        </div>
-    </header>
+  <header class="top-bar">
+    <div class="logo-area">
+      <i class="fa-solid fa-qrcode text-white"></i>
+      <span class="logo-text text-white ms-2">QR CODE</span>
+    </div>
+    <div class="menu-area">
+      <i class="fa-solid fa-bars text-white menu-icon" id="menuToggle"></i>
+      <div class="dropdown-menu-custom" id="dropdownMenu">
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
 
-    <main class="d-flex flex-column align-items-center mt-4 pt-2">
-        
-        <div class="scan-title-wrapper mb-4">
-            <h2 class="scan-title">SCAN</h2>
-        </div>
-        
-        <div class="scanner-container">
-            <div class="corner top-left"></div>
-            <div class="corner top-right"></div>
-            <div class="corner bottom-left"></div>
-            <div class="corner bottom-right"></div>
-            <div class="scan-line"></div>
-        </div>
+  <!-- CHỈ 1 MAIN DUY NHẤT -->
+  <main class="page-main d-flex flex-column align-items-center">
 
-        <button class="btn scan-btn mt-4">SCAN NOW</button>
+    <!-- SCAN -->
+    <section class="scan-section">
+      <div class="scan-title-wrapper mb-4">
+        <h2 class="scan-title">SCAN</h2>
+      </div>
 
-        <div class="gallery-box mt-4">
-            <i class="fa-regular fa-image"></i>
-            <span>Chọn ảnh từ thư viện</span>
-        </div>
+      <div class="scanner-container">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <div class="scan-line"></div>
+      </div>
 
-    </main>
-        <main class="d-flex flex-column align-items-center mt-5 pt-4">
-        
-        <div class="manual-title-wrapper mb-4">
-            <h2 class="manual-title">
-                <i class="fa-solid fa-pen-fancy writing-pen"></i> Enter Code Manually
-            </h2>
-        </div>
-        
-        <div class="input-container mb-4">
-            <input type="text" class="manual-input" placeholder="Enter code here" autocomplete="off">
-        </div>
+      <button class="btn scan-btn mt-4">SCAN NOW</button>
 
-        <button class="btn verify-btn">Verify</button>
+      <div class="gallery-box mt-4">
+        <i class="fa-regular fa-image"></i>
+        <span>Chọn ảnh từ thư viện</span>
+      </div>
+    </section>
 
-    </main>
+    <!-- MANUAL INPUT -->
+    <section class="manual-section">
+      <div class="manual-title-wrapper mb-3">
+        <h2 class="manual-title">
+          <i class="fa-solid fa-pen-fancy writing-pen"></i> Enter Code Manually
+        </h2>
+      </div>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const dropdownMenu = document.getElementById('dropdownMenu');
+      <div class="input-container mb-3">
+        <input type="text" class="manual-input" placeholder="Enter code here" autocomplete="off">
+      </div>
 
-        menuToggle.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('show');
-        });
-    </script>
+      <button class="btn verify-btn">Verify</button>
+    </section>
+
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    menuToggle.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
