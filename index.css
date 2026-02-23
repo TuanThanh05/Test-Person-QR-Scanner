@@ -161,6 +161,7 @@ body {
     cursor: pointer;
     background-color: transparent;
     transition: background 0.3s;
+    margin-bottom: 20px;
 }
 
 .gallery-box:hover {
