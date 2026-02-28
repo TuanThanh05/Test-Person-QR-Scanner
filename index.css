@@ -1,14 +1,14 @@
-/* Thiết lập cơ bản theo yêu cầu */
+
 body {
     background-color: rgb(244, 245, 245);
-    font-family: Arial, Helvetica, sans-serif; /* Font an toàn, mọi trình duyệt đều đọc được */
+    font-family: Arial, Helvetica, sans-serif; 
     font-size: 13px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-/* --- Header Box --- */
+
 .top-bar {
     background-color: rgb(138, 189, 223);
     display: flex;
@@ -37,19 +37,19 @@ body {
     transform: scale(0.9);
 }
 
-/* --- Hiệu ứng Dropdown Menu ấn tượng --- */
+
 .dropdown-menu-custom {
     position: absolute;
     top: 65px;
     right: 20px;
-    background-color: #2b5c8f; /* Màu xanh đậm để nổi bật chữ trắng */
+    background-color: #2b5c8f;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     
-    /* Animation nảy (bounce) khi xuất hiện */
+
     opacity: 0;
     transform: translateY(-20px) scale(0.9);
     pointer-events: none;
@@ -77,6 +77,14 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+
+.scan-title-wrapper {
+    background-color: rgb(138, 189, 223);
+    padding: 5px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
 .scan-title {
     color: white;
     font-size: 18px;
@@ -85,7 +93,6 @@ body {
     margin: 0;
 }
 
-/* --- Ô Quét QR --- */
 .scanner-container {
     width: 250px;
     height: 250px;
@@ -95,7 +102,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* 4 góc khung ngắm camera */
+
 .corner {
     position: absolute;
     width: 40px;
@@ -109,7 +116,6 @@ body {
 .bottom-left { bottom: 15px; left: 15px; border-width: 0 0 4px 4px; border-bottom-left-radius: 5px; }
 .bottom-right { bottom: 15px; right: 15px; border-width: 0 4px 4px 0; border-bottom-right-radius: 5px; }
 
-/* Thanh quét ánh sáng trắng di chuyển */
 .scan-line {
     width: 90%;
     height: 3px;
@@ -129,9 +135,9 @@ body {
     100% { top: 10%; opacity: 0; }
 }
 
-/* --- Nút SCAN NOW --- */
+
 .scan-btn {
-    background-color: rgb(110, 160, 195); /* Màu tối hơn màu nền chính 1 tý */
+    background-color: rgb(110, 160, 195); 
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -150,7 +156,7 @@ body {
     box-shadow: 0 6px 12px rgba(110, 160, 195, 0.6);
 }
 
-/* --- Hộp Chọn Ảnh --- */
+
 .gallery-box {
     display: flex;
     align-items: center;
@@ -161,7 +167,6 @@ body {
     cursor: pointer;
     background-color: transparent;
     transition: background 0.3s;
-    margin-bottom: 20px;
 }
 
 .gallery-box:hover {
@@ -173,123 +178,4 @@ body {
 }
 .gallery-box span {
     font-weight: 500;
-}
-/* --- Tiêu đề "Enter Code Manually" --- */
-.manual-title-wrapper {
-    text-align: center;
-    animation: fadeIn 0.6s ease-out;
-}
-
-.manual-title {
-    color: rgb(110, 160, 195);
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Hoạt ảnh cây viết đang viết (di chuyển ~1cm = ~35px) */
-.writing-pen {
-    color: rgb(138, 189, 223);
-    display: inline-block;
-    animation: writeAnim 1.5s infinite ease-in-out;
-    transform-origin: bottom left;
-}
-
-@keyframes writeAnim {
-    0% { transform: translateX(0px) translateY(0px) rotate(0deg); }
-    25% { transform: translateX(10px) translateY(-5px) rotate(-15deg); }
-    50% { transform: translateX(20px) translateY(0px) rotate(-5deg); }
-    75% { transform: translateX(30px) translateY(-5px) rotate(-15deg); }
-    100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Ô Nhập Mã --- */
-.input-container {
-    width: 100%;
-    max-width: 350px;
-    padding: 0 20px;
-}
-
-.manual-input {
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.5); /* Viền đen mỏng */
-    border-radius: 8px;
-    padding: 15px 20px;
-    font-size: 16px;
-    color: black;
-    text-align: center;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-}
-
-.manual-input::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    letter-spacing: normal;
-}
-
-.manual-input:focus {
-    outline: none;
-    border-color: rgb(110, 160, 195);
-    box-shadow: 0 0 8px rgba(110, 160, 195, 0.4);
-    background-color: rgba(255, 255, 255, 0.5); /* Sáng nhẹ lên khi nhấp vào */
-}
-
-/* --- Nút Xác thực (Verify) --- */
-.verify-btn {
-    background-color: rgb(110, 160, 195); /* Màu đậm hơn nền chủ đạo một chút */
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 12px 50px;
-    border-radius: 30px;
-    border: none;
-    letter-spacing: 1.5px;
-    box-shadow: 0 4px 10px rgba(110, 160, 195, 0.4);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-
-.verify-btn:hover {
-    background-color: rgb(85, 140, 180); /* Đậm hơn nữa khi hover */
-    color: white;
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 6px 15px rgba(85, 140, 180, 0.6);
-}
-
-.verify-btn:active {
-    transform: translateY(1px) scale(0.98);
-    box-shadow: 0 2px 5px rgba(85, 140, 180, 0.4);
-}
-/* MAIN bọc toàn bộ nội dung trang */
-.page-main{
-    margin-top: 18px;   /* thay vì mt-4 và mt-5 lộn xộn */
-    padding-top: 8px;
-}
-
-/* 2 khu vực */
-.scan-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* chỉnh khoảng cách “chỉ một chút” giữa scan và nhập */
-.manual-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 22px;   /* <-- CHỈNH Ở ĐÂY: nhỏ hơn nữa thì 12-18px */
-    padding-top: 6px;
 }
